@@ -1,26 +1,39 @@
+:root {
+    --nav-bg: darkblue;
+    --nav-link-color: white;
+    --nav-link-padding: 20px;
+    --nav-padding: 10px;
+    --heading-color: darkblue;
+    --img-border-color: black;
+    --img-border-width: 1px;
+    --img-padding: 2px;
+    --img-shadow: 0 0 30px gray;
+    --paragraph-padding: 10px;
+}
+
 nav {
-    background-color: darkblue;
-    padding: 10px;
+    background-color: var(--nav-bg);
+    padding: var(--nav-padding);
 }
 
 nav a {
-    color: white;
+    color: var(--nav-link-color);
     display: block;
-    padding: 20px;
+    padding: var(--nav-link-padding);
 }
 
 h1 {
-    darkblue;
+    color: var(--heading-color);
 }
 
 img {
-    width: 150;
+    width: 150px;
     height: auto;
-    border: 1px solid black;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
+    border: var(--img-border-width) solid var(--img-border-color);
+    padding: var(--img-padding);
+    box-shadow: var(--img-shadow)
 }
 
 p {
-    padding: 10px;
+    padding: var(--paragraph-padding);
 }
