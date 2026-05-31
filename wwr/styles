@@ -1,0 +1,245 @@
+/*Venice Rafting */
+:root {
+    --primary-color: #2c5e4c;
+    /* deep lake green */
+    --secondary-color: #8cb369;
+    /* sage green */
+    --accent1-color: #5b8c5a;
+    /* muted forest green */
+    --accent2-color: #f4e285;
+    /* soft pale yellow */
+    --heading-font: "Times New Roman", "Georgia", serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    color: #1e2f2b;
+    background-color: #fefcf5;
+}
+
+header,
+main,
+footer {
+    width: 840px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+/* Header & navigation */
+header {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    border-radius: 0 0 12px 12px;
+}
+
+header img {
+    width: 80px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: var(--accent2-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 0.2rem;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #fff5cf;
+    text-decoration: underline;
+}
+
+/* headings */
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    letter-spacing: -0.3px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    border-left: 6px solid var(--secondary-color);
+    padding-left: 16px;
+    margin: 24px 0 16px 0;
+}
+
+/* general spacing */
+nav,
+p,
+section,
+article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/* hero overlay */
+.hero {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.85;
+    background-color: var(--accent1-color);
+    color: #fff2cf;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(44, 94, 76, 0.9);
+    color: #fff9e8;
+    padding: 20px;
+    border-radius: 16px;
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
+    border-radius: 50%;
+    border: 3px solid var(--accent2-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 0 0 0 16px;
+}
+
+.hero article p {
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* history section */
+section p {
+    background-color: #faf8f0;
+    padding: 18px;
+    border-radius: 20px;
+    line-height: 1.6;
+    border: 1px solid #e2e0d4;
+}
+
+/* footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    border-radius: 12px 12px 0 0;
+    margin-top: 32px;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.socialmedia a {
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.socialmedia a:hover {
+    transform: scale(1.08);
+}
+
+.socialmedia img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
+}
+
+.socialmedia img:hover {
+    opacity: 1;
+}
+
+/* responsive */
+@media (max-width: 860px) {
+
+    header,
+    main,
+    footer {
+        width: 95%;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+        top: 10px;
+    }
+
+    .hero article {
+        flex-direction: column;
+        bottom: 15px;
+        left: 10px;
+        right: 10px;
+        text-align: center;
+    }
+
+    .hero article img {
+        float: none;
+        margin: 0 auto;
+        width: 90px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+}
