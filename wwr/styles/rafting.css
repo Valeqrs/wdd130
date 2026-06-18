@@ -150,6 +150,56 @@ h2 {
     object-fit: cover;
 }
 
+/* About page hero heading overlay */
+.hero h1 {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    background-color: var(--accent1-color);
+    color: #fff2cf;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    opacity: 0.85;
+    margin: 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* About page hero article overlay */
+.hero article {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(44, 94, 76, 0.9);
+    color: #fff9e8;
+    padding: 20px;
+    border-radius: 16px;
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
+    border-radius: 50%;
+    border: 3px solid var(--accent2-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 0 0 0 16px;
+}
+
+.hero article p {
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Home page hero content overlay */
 .hero-content {
     position: absolute;
     top: 50%;
@@ -174,6 +224,11 @@ h2 {
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
     margin-bottom: 0.25rem;
     letter-spacing: 2px;
+    background: none;
+    position: static;
+    width: auto;
+    padding: 0;
+    opacity: 1;
 }
 
 .hero-content p {
@@ -484,38 +539,6 @@ h2 {
 }
 
 /*about page */
-.hero article {
-    position: absolute;
-    bottom: 30px;
-    left: 20px;
-    right: 20px;
-    background-color: rgba(44, 94, 76, 0.9);
-    color: #fff9e8;
-    padding: 20px;
-    border-radius: 16px;
-    backdrop-filter: blur(2px);
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.hero article img {
-    float: right;
-    width: 125px;
-    border-radius: 50%;
-    border: 3px solid var(--accent2-color);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    margin: 0 0 0 16px;
-}
-
-.hero article p {
-    margin: 0;
-    padding: 0;
-    flex: 1;
-    font-weight: 500;
-    line-height: 1.4;
-}
-
 .history-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -871,6 +894,27 @@ footer p {
     main,
     footer {
         width: 95%;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+        top: 10px;
+        padding: 10px;
+    }
+
+    .hero article {
+        flex-direction: column;
+        bottom: 15px;
+        left: 10px;
+        right: 10px;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .hero article img {
+        float: none;
+        margin: 0 auto;
+        width: 90px;
     }
 
     .hero-content {
