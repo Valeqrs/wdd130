@@ -199,14 +199,15 @@ h2 {
     line-height: 1.4;
 }
 
-/* Home page hero content overlay */
+/* Home page hero content overlay - IMPROVED VISIBILITY */
 .hero-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background: rgba(0, 0, 0, 0.50);
+    background: rgba(0, 0, 0, 0.65);
+    /* darker for better contrast */
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     padding: 2.5rem 3.5rem;
@@ -220,7 +221,8 @@ h2 {
 
 .hero-content h1 {
     font-size: 3.2rem;
-    color: #fff;
+    color: #ffffff;
+    /* pure white */
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
     margin-bottom: 0.25rem;
     letter-spacing: 2px;
@@ -233,10 +235,13 @@ h2 {
 
 .hero-content p {
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 500;
+    /* bolder */
     margin-bottom: 1.8rem;
-    color: #f4f0e2;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    /* pure white */
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.9);
+    /* stronger shadow */
 }
 
 .hero-content .btn {
@@ -927,7 +932,9 @@ footer p {
     }
 
     .hero-content p {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+        /* slightly smaller on mobile but still bold */
+        font-weight: 500;
     }
 
     .more-grid {
