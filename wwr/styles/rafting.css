@@ -199,7 +199,7 @@ h2 {
     line-height: 1.4;
 }
 
-/* Home page hero content overlay - IMPROVED VISIBILITY */
+/* Home page hero content overlay */
 .hero-content {
     position: absolute;
     top: 50%;
@@ -207,7 +207,6 @@ h2 {
     transform: translate(-50%, -50%);
     text-align: center;
     background: rgba(0, 0, 0, 0.65);
-    /* darker for better contrast */
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     padding: 2.5rem 3.5rem;
@@ -222,7 +221,6 @@ h2 {
 .hero-content h1 {
     font-size: 3.2rem;
     color: #ffffff;
-    /* pure white */
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
     margin-bottom: 0.25rem;
     letter-spacing: 2px;
@@ -236,12 +234,9 @@ h2 {
 .hero-content p {
     font-size: 1.5rem;
     font-weight: 500;
-    /* bolder */
     margin-bottom: 1.8rem;
     color: #ffffff;
-    /* pure white */
     text-shadow: 0 2px 16px rgba(0, 0, 0, 0.9);
-    /* stronger shadow */
 }
 
 .hero-content .btn {
@@ -502,6 +497,48 @@ h2 {
 
 .trip-card p strong {
     color: var(--primary-color);
+}
+
+/* Difficulty Guide */
+.difficulty-guide {
+    margin: 3rem 1rem;
+    padding: 1.5rem 1.5rem 2.5rem;
+    background: #faf8f0;
+    border-radius: 28px;
+    border: 1px solid #e2ddd0;
+}
+
+.difficulty-guide h2 {
+    margin-top: 0;
+}
+
+.difficulty-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.diff-card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 20px;
+    border-left: 8px solid var(--primary-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.diff-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.diff-card p {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
 .trip-table-section {
@@ -933,7 +970,6 @@ footer p {
 
     .hero-content p {
         font-size: 1.2rem;
-        /* slightly smaller on mobile but still bold */
         font-weight: 500;
     }
 
@@ -955,6 +991,10 @@ footer p {
     .adventure-gallery {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 12px;
+    }
+
+    .difficulty-grid {
+        grid-template-columns: 1fr;
     }
 
     footer {
